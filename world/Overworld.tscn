@@ -56,7 +56,6 @@ _sections_unfolded = [ "Editor" ]
 
 [node name="Player" parent="." index="2" instance=ExtResource( 2 )]
 
-position = Vector2( 69.5723, 71.4424 )
-move_speed = 40.0
+position = Vector2( 78.8203, 72.5318 )
 
 

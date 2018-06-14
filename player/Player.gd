@@ -1,8 +1,22 @@
 extends KinematicBody2D
 
+export(float) var move_speed = 40.0
+
 var _d_input      = Vector2()
 var _d_input_norm = Vector2()
-export(float) var move_speed = 40.0
+
+onready var anim_player = get_node("AnimationPlayer")
+
+func update_animation():
+	if _d_input.x > 0:
+		anim_player.play("face_right")
+	elif _d_input.x < 0:
+		anim_player.play("face_left")
+	
+	if _d_input.y > 0:
+		anim_player.play("face_down")
+	elif _d_input.y < 0:
+		anim_player.play("face_up")
 
 func _unhandled_input(event):
 	var right = Vector2(1, 0)
@@ -21,6 +35,7 @@ func _unhandled_input(event):
 		_d_input += down
 		get_tree().set_input_as_handled()
 	_d_input_norm = _d_input.normalized()
+	update_animation()
 
 func _physics_process(delta):
 	move_and_slide(_d_input_norm * move_speed)
