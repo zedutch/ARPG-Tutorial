@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://world/dirt.png" type="Texture" id=1]
+[ext_resource path="res://world/grass_dirt.png" type="Texture" id=2]
+
+[node name="Overworld_TileSet" type="Node2D" index="0"]
+
+[node name="Dirt" type="Sprite" parent="." index="0"]
+
+position = Vector2( 118.647, 19.1006 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 16, 16 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="Grass_Dirt" type="Sprite" parent="." index="1"]
+
+position = Vector2( 47.3022, 25.695 )
+texture = ExtResource( 2 )
+region_rect = Rect2( 63, 12, 15, 18 )
+_sections_unfolded = [ "Region" ]
+
+
