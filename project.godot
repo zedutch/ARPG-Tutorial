@@ -14,6 +14,10 @@ config/name="ARPG Tutorial"
 run/main_scene="res://world/Overworld.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Data="*res://systems/Data.gd"
+
 [display]
 
 window/size/width=1280
