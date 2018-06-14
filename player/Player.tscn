@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 3.74446, 2.25925 )
+extents = Vector2( 4.83294, 7.07244 )
 
 [sub_resource type="Animation" id=2]
 
@@ -172,7 +172,7 @@ move_speed = 40.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-position = Vector2( 0.561514, 5.56409 )
+position = Vector2( -0.0388718, 0.648444 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="." index="1"]

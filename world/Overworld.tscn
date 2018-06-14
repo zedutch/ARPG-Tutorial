@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://world/overworld_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://world/Bush.tscn" type="PackedScene" id=3]
 
 [node name="Overworld" type="Node2D" index="0"]
 
@@ -84,5 +85,93 @@ _sections_unfolded = [ "Editor" ]
 [node name="Player" parent="." index="3" instance=ExtResource( 2 )]
 
 position = Vector2( 27.6974, 66.2073 )
+
+[node name="Bushes" type="Node2D" parent="." index="4"]
+
+editor/display_folded = true
+
+[node name="Bush" parent="Bushes" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 8, 24 )
+
+[node name="Bush2" parent="Bushes" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 24, 24 )
+
+[node name="Bush3" parent="Bushes" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 8, 40 )
+
+[node name="Bush4" parent="Bushes" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 24, 40 )
+
+[node name="Bush5" parent="Bushes" index="4" instance=ExtResource( 3 )]
+
+position = Vector2( -8, 40 )
+
+[node name="Bush6" parent="Bushes" index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 40, 24 )
+
+[node name="Bush7" parent="Bushes" index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 200, 8 )
+
+[node name="Bush8" parent="Bushes" index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 184, 8 )
+
+[node name="Bush9" parent="Bushes" index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 168, 8 )
+
+[node name="Bush10" parent="Bushes" index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 168, 24 )
+
+[node name="Bush11" parent="Bushes" index="10" instance=ExtResource( 3 )]
+
+position = Vector2( 184, 24 )
+
+[node name="Bush12" parent="Bushes" index="11" instance=ExtResource( 3 )]
+
+position = Vector2( 200, 24 )
+
+[node name="Bush13" parent="Bushes" index="12" instance=ExtResource( 3 )]
+
+position = Vector2( 216, 88 )
+
+[node name="Bush14" parent="Bushes" index="13" instance=ExtResource( 3 )]
+
+position = Vector2( 88, 104 )
+
+[node name="Bush15" parent="Bushes" index="14" instance=ExtResource( 3 )]
+
+position = Vector2( 88, 88 )
+
+[node name="Bush16" parent="Bushes" index="15" instance=ExtResource( 3 )]
+
+position = Vector2( 88, 72 )
+
+[node name="Bush17" parent="Bushes" index="16" instance=ExtResource( 3 )]
+
+position = Vector2( 72, 88 )
+
+[node name="Bush18" parent="Bushes" index="17" instance=ExtResource( 3 )]
+
+position = Vector2( 72, 104 )
+
+[node name="Bush19" parent="Bushes" index="18" instance=ExtResource( 3 )]
+
+position = Vector2( 72, 8 )
+
+[node name="Bush20" parent="Bushes" index="19" instance=ExtResource( 3 )]
+
+position = Vector2( 88, 8 )
+
+[node name="Bush21" parent="Bushes" index="20" instance=ExtResource( 3 )]
+
+position = Vector2( 56, 24 )
 
 
