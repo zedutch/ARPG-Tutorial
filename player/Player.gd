@@ -7,16 +7,38 @@ var _d_input_norm = Vector2()
 
 onready var anim_player = get_node("AnimationPlayer")
 
+enum DIR {
+	UP, DOWN, LEFT, RIGHT
+}
+var facing = DIR.DOWN
+
 func update_animation():
-	if _d_input.x > 0:
-		anim_player.play("face_right")
-	elif _d_input.x < 0:
-		anim_player.play("face_left")
-	
 	if _d_input.y > 0:
-		anim_player.play("face_down")
+		if facing != DIR.DOWN:
+			facing = DIR.DOWN
+			anim_player.play("walk_down")
 	elif _d_input.y < 0:
-		anim_player.play("face_up")
+		if facing != DIR.UP:
+			facing = DIR.UP
+			anim_player.play("walk_up")
+	elif _d_input.x > 0:
+		if facing != DIR.RIGHT:
+			facing = DIR.RIGHT
+			anim_player.play("walk_right")
+	elif _d_input.x < 0:
+		if facing != DIR.LEFT:
+			facing = DIR.LEFT
+			anim_player.play("walk_left")
+	else:
+		match facing:
+			DIR.DOWN:
+				anim_player.play("idle_down")
+			DIR.UP:
+				anim_player.play("idle_up")
+			DIR.LEFT:
+				anim_player.play("idle_left")
+			DIR.RIGHT:
+				anim_player.play("idle_right")
 
 func _unhandled_input(event):
 	var right = Vector2(1, 0)
